@@ -117,6 +117,14 @@ console.log(dev());
 // const odds = arr.filter((n) => n % 2 != 0 )
 // then sort it odds.sort((a,b) => a - b) 
 
+sortArray = (arr) => {
+  var odd = arr.filter((i)=> i % 2 != 0);
+  odd = odd.sort((a,b) => a - b);
+  var sorted = arr.map((num) =>  num % 2 != 0 ? odd.shift() : num);
+  return sorted;
+}
+console.log(sortArray([5, 3, 2, 8, 1, 4]));
+
 
                                               // QUICK PROBLEM #5 //
 // Your task is to return:
@@ -138,7 +146,7 @@ function isRubyComing(list) {
   return list.some(e => e.language === 'Ruby');
 }
 
-
+console.log(isRubyComing(list1));
 
 
 
