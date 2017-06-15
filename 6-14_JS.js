@@ -1,5 +1,4 @@
 /*
-
                                               // PROBLEM #1 //
 You will be given an array of objects (associative arrays in PHP) representing data about developers
 who have signed up to attend the next coding meetup that you are organising.
@@ -18,8 +17,10 @@ var list1 = [
 your function should return the following object (associative array in PHP):
 
 { C: 2, JavaScript: 1, Ruby: 1 }
-
 */
+
+
+
 
 
 
@@ -43,6 +44,14 @@ var list1 = [
   Age is represented by a number which can be any positive integer. 
 
 */
+
+
+
+
+
+
+
+
 
 /*
                                               // PROBLEM #3 //
@@ -79,20 +88,34 @@ write a function that adds the username property to each object in the input arr
 
 */
 
-/*
 
+
+
+
+
+
+
+/*
                                               // PROBLEM #4 //
   You have an array of numbers.
-  Your task is to sort ascending odd numbers but even numbers must be on their places.
+  Your task is to sort ascending even numbers but odd numbers must be on their places.
 
   Zero isn't an odd number and you don't need to move it. If you have an empty array, you need to return it.
 
   Example
 
-  sortArray([5, 3, 2, 8, 1, 4]) == [1, 3, 2, 8, 5, 4]
+  sortArray([5, 3, 2, 8, 1, 4]) == [5, 3, 2, 8, 1, 4]
 
   Trick is to create an array of the odd numbers using filter, then map them back into the starting array:
 
-  const odds = arr.filter((n) => n % 2 != 0 )
-  then sort it odds.sort((a,b) => a - b) 
+  const evens = arr.filter((n) => n % 2 == 0 )
+  then sort it evens.sort((a,b) => a - b) 
 */
+
+
+
+
+
+
+
+
