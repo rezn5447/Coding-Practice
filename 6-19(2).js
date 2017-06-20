@@ -10,10 +10,15 @@ numbers = [1,2,3]
 
 function doublesAndIndex(nums) {
    return nums.map(function (number,index){
-     ((number * 2 ) * index)
+     return ((number * 2 ) * index);
    })
 }
 
+
+const doublesAndIndex2 = (nums) => nums.map((number, index) =>  ((number * 2) * index));
+
+
+console.log(doublesAndIndex2(numbers));
 // Put es6 version here:
 
 
@@ -45,7 +50,7 @@ var list2 = [
   { firstName: 'Sumayah', lastName: 'M.', country: 'Tajikistan', continent: 'Asia', age: 30, language: 'CSS' },
   { firstName: 'Wichard', lastName: 'M.', country: 'America', continent: 'Europe', age: 30, language: 'JavaScript' },
   { firstName: 'Sumayah', lastName: 'M.', country: 'Europe', continent: 'Europe', age: 30, language: 'JavaScript' },
-  { firstName: 'SpongeBob', lastName: 'M.', country: 'Tajikistan', continent: 'Europe', age: 30, language: 'JavaScript' }
+  { firstName: 'SongeBob', lastName: 'M.', country: 'Tajikistan', continent: 'Europe', age: 30, language: 'JavaScript' }
 ];
 
 // Your task is to return true if any of the JavaScript developers names start with R.
@@ -55,10 +60,15 @@ var list2 = [
 
 function includesR(list){
   return list.some( function(dev) {
-    return dev.firstName.includes('R')
+    return dev.firstName[0].includes('R') && dev.language.includes('JavaScript');
   })
 }
 
+console.log(includesR(list1));
+
+const includesR2 = (list) => list.some((dev) => dev.firstName[0].includes('R') && dev.language.includes('JavaScript'));
+
+console.log(includesR2(list1));
 // Put es6 version here:
 
 
@@ -75,15 +85,25 @@ function includesR(list){
 function looper(n){
   var i = n
   while(i >= 0){
-    console.log(i)
+    console.log(i);
     i--
   }
-  return 'DONE!'
+  
+  return 'Done';
 }
+
 
 // Put es6 version here:
 
+const looper2 = (n) => {
+  while (n >= 0) {
+    console.log(n);
+    n--
+  }
+  return 'Done';
+};
 
+console.log(looper2(2));
 
 
 
