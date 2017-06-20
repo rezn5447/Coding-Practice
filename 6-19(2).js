@@ -15,14 +15,14 @@ function doublesAndIndex(nums) {
 }
 
 
+
+// Put es6 version here:
+
+
 const doublesAndIndex2 = (nums) => nums.map((number, index) =>  ((number * 2) * index));
 
 
 console.log(doublesAndIndex2(numbers));
-// Put es6 version here:
-
-
-
 
 
 
@@ -66,13 +66,12 @@ function includesR(list){
 
 console.log(includesR(list1));
 
+
+// Put es6 version here:
+
 const includesR2 = (list) => list.some((dev) => dev.firstName[0].includes('R') && dev.language.includes('JavaScript'));
 
 console.log(includesR2(list1));
-// Put es6 version here:
-
-
-
 
 
 
