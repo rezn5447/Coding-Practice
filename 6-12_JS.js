@@ -56,11 +56,11 @@ var list1 = [
 // you will need a block statement
 // Use .map
 
-return array.map(function(item){
+function addGreeting() {
+return list1.map(function(item){
   item.greeting = 'Hi ' + item.firstName + ', what do you like the most about ' + item.language +'?';
-  return item;
-})
-}
+  return item;}
+)}
 addGreeting(list1);
 
 
