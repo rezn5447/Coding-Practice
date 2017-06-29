@@ -1,5 +1,6 @@
-                                              // PROBLEM #1 //
-// You will be given an array of objects (hashes in ruby) representing data about developers who have signed up to attend the coding meetup that you are organising for the first time.
+// PROBLEM #1 //
+
+// You will be given an array of objects representing data about developers who have signed up to attend the coding meetup that you are organising for the first time.
 
 //For example, given the following list:
 
@@ -17,9 +18,15 @@ var list1 = [
 
 // Should return 3
 
+function jsDevelopers(array){
+  return array.filter(function(item){
+    return item.continent == "Europe";
+  });
+}
+jsDevelopers(list1).length;
 
 
-                                              // PROBLEM #2 //
+// PROBLEM #2 //
 // Your task is to return an array where each object will have a new property 'greeting' with the following string value:
 
 // Hi < firstName here >, what do you like the most about < language here >?
@@ -29,7 +36,7 @@ var list1 = [
 var list1 = [
   { firstName: 'Sofia', lastName: 'I.', country: 'Argentina', continent: 'Americas', age: 35, language: 'Java' },
   { firstName: 'Lukas', lastName: 'X.', country: 'Croatia', continent: 'Europe', age: 35, language: 'Python' },
-  { firstName: 'Madison', lastName: 'U.', country: 'United States', continent: 'Americas', age: 32, language: 'Ruby' } 
+  { firstName: 'Madison', lastName: 'U.', country: 'United States', continent: 'Americas', age: 32, language: 'Ruby' }
 ];
 
 // Your function should return the following array:
@@ -42,15 +49,22 @@ var list1 = [
   },
   { firstName: 'Madison', lastName: 'U.', country: 'United States', continent: 'Americas', age: 32, language: 'Ruby',
     greeting: 'Hi Madison, what do you like the most about Ruby?'
-  } 
+  }
 ];
 
 // The trick is to return a person, adding the property as we go
 // you will need a block statement
 // Use .map
 
+return array.map(function(item){
+  item.greeting = 'Hi ' + item.firstName + ', what do you like the most about ' + item.language +'?';
+  return item;
+})
+}
+addGreeting(list1);
 
-                                              // PROBLEM #3 //
+
+// PROBLEM #3 //
 // You will be given an array of objects (associative arrays in PHP) representing data about developers who have signed up to attend the next coding meetup that you are organising. The list is ordered according to who signed up first.
 
 // Your task is to return one of the following strings:
@@ -83,7 +97,7 @@ var list1 = [
 // Trick is to create an array of the odd numbers using filter, then map them back into the starting array:
 
 // const odds = arr.filter((n) => n % 2 != 0 )
-// then sort it odds.sort((a,b) => a - b) 
+// then sort it odds.sort((a,b) => a - b)
 
 
                                               // QUICK PROBLEM #5 //
@@ -105,21 +119,3 @@ var list1 = [
 function isRubyComing(list) {
   return list.some(e => e.language === 'Ruby');
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
