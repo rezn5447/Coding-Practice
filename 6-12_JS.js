@@ -14,9 +14,30 @@ var list1 = [
 
 // Your task is to return the number of JavaScript developers coming from Europe.
 // Use .filter
-
 // Should return 3
 
+
+
+
+
+
+// I couldn't get .filter to return a numerical value. So I used .reduce
+
+list1.reduce(function(previous, item) {
+  if (item.language === 'JavaScript' && item.continent === 'Europe'){
+    previous += 1;
+  }
+    return previous;
+}, 0);
+
+
+
+
+
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
                                               // PROBLEM #2 //
@@ -50,6 +71,19 @@ var list1 = [
 // Use .map
 
 
+
+list1.map(function(item) {
+  item.greeting = 'Hi ' + item.firstName + ', what do you like most about ' + ' ' +item.language+ '?';
+  return item;
+});
+
+
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
                                               // PROBLEM #3 //
 // You will be given an array of objects (associative arrays in PHP) representing data about developers who have signed up to attend the next coding meetup that you are organising. The list is ordered according to who signed up first.
 
@@ -60,7 +94,7 @@ var list1 = [
 // For example, given the following input array:
 
 var list1 = [
-  { firstName: 'Mark', lastName: 'G.', country: 'Scotland', continent: 'Europe', age: 22, language: 'JavaScript' },
+  { firstName: 'Mark', lastName: 'G.', country: 'Scotland',  continent: 'Europe', age: 22, language: 'JavaScript' },
   { firstName: 'Victoria', lastName: 'T.', country: 'Puerto Rico', continent: 'Americas', age: 30, language: 'Python' },
   { firstName: 'Emma', lastName: 'B.', country: 'Norway', continent: 'Europe', age: 19, language: 'Clojure' }
 ];
@@ -68,9 +102,34 @@ var list1 = [
 // Use .find and an If statement, or ternary =)
 
 // To embed javascript variables we use backticks ` and ${variable}
+ 
 
 
 
+
+// I didnt understand this problem, below is my attempt to return a string from .find and an if statement, returns python developer object
+
+list1.find(function(item) {
+  const firstName = item.firstName;
+  const country = item.country;
+  if (item.language === 'Python') {
+    return `${firstName}, ${country} of the first Python developer who has signed up`;
+  }
+  
+});
+
+
+
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+
+
+                                              // PROBLEM #4 //
 // You have an array of numbers.
 // Your task is to sort ascending odd numbers but even numbers must be on their places.
 
@@ -84,6 +143,43 @@ var list1 = [
 
 // const odds = arr.filter((n) => n % 2 != 0 )
 // then sort it odds.sort((a,b) => a - b) 
+
+
+
+
+
+// I'm going to need a little bit of input on how this one works, function replace_odd_inorder and the return of .filter.sort are still pretty confusing to me
+
+function sortArray(array) {
+  
+  let array2 = array.filter(is_odd).sort(ascending);
+  return array.map(replace_odd_inorder);
+  
+  function ascending(a, b) {
+    return a - b;
+  }
+  
+  function is_odd(num) {
+    return num % 2;
+  }
+  
+  function replace_odd_inorder(num) {
+    return is_odd(num) ? array2.shift() : num;
+  }
+}
+
+sortArray(list1);
+
+
+
+
+
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
 
 
                                               // QUICK PROBLEM #5 //
@@ -102,10 +198,11 @@ var list1 = [
 ];
 
 
-function isRubyComing(list) {
-  return list.some(e => e.language === 'Ruby');
-}
 
+
+list1.some(function(item) {
+  return item.language === 'Ruby';
+  });
 
 
 
