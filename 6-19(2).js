@@ -93,8 +93,13 @@ function looper(n){
 
 // Put es6 version here:
 
+let countDownFrom = (num) => {
+  if (num === -1)return;
+  console.log(num);
+  countDownFrom(num - 1);
+}
 
-
+countDownFrom(20);
 
 
 
