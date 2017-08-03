@@ -15,7 +15,20 @@ var list1 = [
 // Your task is to return the number of JavaScript developers coming from Europe.
 // Use .filter
 
+
+function filter() {
+  var arr = list1.filter( function(dev){
+    return dev.language === 'JavaScript' && dev.continent === 'Europe';
+  });
+  return arr.length;
+}
+
+console.log(filter());
+
 // Should return 3
+
+
+
 
 
 
@@ -49,6 +62,13 @@ var list1 = [
 // you will need a block statement
 // Use .map
 
+ var test = list1.map(function(list) {
+  list.greeting = `Hi ${list.firstName}, what do you like the most about ${list.language}`;
+  return list;
+});
+
+console.log(test);
+
 
                                               // PROBLEM #3 //
 // You will be given an array of objects (associative arrays in PHP) representing data about developers who have signed up to attend the next coding meetup that you are organising. The list is ordered according to who signed up first.
@@ -68,7 +88,19 @@ var list1 = [
 // Use .find and an If statement, or ternary =)
 
 // To embed javascript variables we use backticks ` and ${variable}
+var dev = ()=> {
+  
+  var dev = list1.find((list)=> {
+    return list.language === 'Python';
+  });
+  if(dev === undefined) {
+    return 'THere will be no Python developers';
+  }
+  return `${dev.firstName}, ${dev.country} of the first Python developer who has signed up.`
+}
 
+
+console.log(dev());
 
                                               // PROBLEM #4 //
 // You have an array of numbers.
@@ -84,6 +116,14 @@ var list1 = [
 
 // const odds = arr.filter((n) => n % 2 != 0 )
 // then sort it odds.sort((a,b) => a - b) 
+
+sortArray = (arr) => {
+  var odd = arr.filter((i)=> i % 2 != 0);
+  odd = odd.sort((a,b) => a - b);
+  var sorted = arr.map((num) =>  num % 2 != 0 ? odd.shift() : num);
+  return sorted;
+}
+console.log(sortArray([5, 3, 2, 8, 1, 4]));
 
 
                                               // QUICK PROBLEM #5 //
@@ -106,7 +146,7 @@ function isRubyComing(list) {
   return list.some(e => e.language === 'Ruby');
 }
 
-
+console.log(isRubyComing(list1));
 
 
 
