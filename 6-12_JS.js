@@ -18,6 +18,13 @@ var list1 = [
 // Should return 3
 
 
+function JSDevs(babaloo) {
+  return babaloo.filter((devs) => devs.continent == 'Europe' && devs.language == 'JavaScript').length
+}
+JSDevs(list1);
+
+
+
 
                                               // PROBLEM #2 //
 // Your task is to return an array where each object will have a new property 'greeting' with the following string value:
