@@ -16,8 +16,10 @@ var list1 = [
 // Use .filter
 
 function JSDevs(babaloo) {
-  return babaloo.filter((devs) => devs.continent == 'Europe' && devs.language == 'JavaScript').length
+  console.log(babaloo.filter((devs) => devs.continent == 'Europe' && devs.language == 'JavaScript').length)
 }
+
+JSDevs(list1);
 // Should return 3
 
 
@@ -48,9 +50,14 @@ var list1 = [
   } 
 ];
 
+list1.map((person) => {
+    person.greeting = 'Hi ' + person.firstName + ', what do you like the most about ' + person.language + '?';
+    console.log(person);
+})
 // The trick is to return a person, adding the property as we go
 // you will need a block statement
 // Use .map
+
 
 
                                               // PROBLEM #3 //
