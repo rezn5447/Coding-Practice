@@ -12,6 +12,7 @@ var list1 = [
   { firstName: 'Sumayah', lastName: 'M.', country: 'Tajikistan', continent: 'Europe', age: 30, language: 'JavaScript' }
 ];
 
+
 // Your task is to return the number of JavaScript developers coming from Europe.
 // Use .filter
 
