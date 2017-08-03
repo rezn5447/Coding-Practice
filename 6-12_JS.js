@@ -17,6 +17,17 @@ var list1 = [
 
 // Should return 3
 
+function JSDevs(list) {
+  return list.filter((dev) => dev.continent == 'Europe' && dev.language == 'JavaScript').length
+}
+
+JSDevs(list1)
+
+
+
+
+
+
 
 
                                               // PROBLEM #2 //
