@@ -15,6 +15,13 @@ var list1 = [
 // Your task is to return the number of JavaScript developers coming from Europe.
 // Use .filter
 
+function JSDevs (list){
+  return list.filter((devs) => devs.continent == 'Europe' && devs.language == 'JavaScript').length;
+}
+
+JSDevs(list1);
+
+
 // Should return 3
 
 
