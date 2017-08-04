@@ -60,7 +60,7 @@ var list1 = [
     person.greeting = 'Hi ' + person.firstName + ', what do you like the most about ' + person.language + '?';
   });
 
-  console.log(list1);
+  // console.log(list1);
 
 
 
@@ -78,6 +78,12 @@ var list1 = [
   { firstName: 'Victoria', lastName: 'T.', country: 'Puerto Rico', continent: 'Americas', age: 30, language: 'Python' },
   { firstName: 'Emma', lastName: 'B.', country: 'Norway', continent: 'Europe', age: 19, language: 'Clojure' }
 ];
+
+  var pythonDev = list1.find(function(person){
+    if (person.language == 'Python') {
+      console.log('first Python developer signed up: ' + person.firstName + ', ' + person.country);
+    }
+  });
 
 // Use .find and an If statement, or ternary =)
 
