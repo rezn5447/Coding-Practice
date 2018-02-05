@@ -1,5 +1,7 @@
                                               // PROBLEM #1 //
-// You will be given an array of objects (hashes in ruby) representing data about developers who have signed up to attend the coding meetup that you are organising for the first time.
+// You will be given an array of objects (hashes in ruby)
+// representing data about developers who have signed up to attend the coding
+// meetup that you are organising for the first time.
 
 //For example, given the following list:
 
@@ -18,6 +20,13 @@ var list1 = [
 // Should return 3
 
 
+function JSDevs(babaloo) {
+ return babaloo.filter((devs) => devs.continent == 'Europe' && devs.language == 'JavaScript').length
+}
+
+
+JSDevs(list1)
+
 
                                               // PROBLEM #2 //
 // Your task is to return an array where each object will have a new property 'greeting' with the following string value:
@@ -29,7 +38,7 @@ var list1 = [
 var list1 = [
   { firstName: 'Sofia', lastName: 'I.', country: 'Argentina', continent: 'Americas', age: 35, language: 'Java' },
   { firstName: 'Lukas', lastName: 'X.', country: 'Croatia', continent: 'Europe', age: 35, language: 'Python' },
-  { firstName: 'Madison', lastName: 'U.', country: 'United States', continent: 'Americas', age: 32, language: 'Ruby' } 
+  { firstName: 'Madison', lastName: 'U.', country: 'United States', continent: 'Americas', age: 32, language: 'Ruby' }
 ];
 
 // Your function should return the following array:
@@ -42,7 +51,7 @@ var list1 = [
   },
   { firstName: 'Madison', lastName: 'U.', country: 'United States', continent: 'Americas', age: 32, language: 'Ruby',
     greeting: 'Hi Madison, what do you like the most about Ruby?'
-  } 
+  }
 ];
 
 // The trick is to return a person, adding the property as we go
@@ -83,7 +92,7 @@ var list1 = [
 // Trick is to create an array of the odd numbers using filter, then map them back into the starting array:
 
 // const odds = arr.filter((n) => n % 2 != 0 )
-// then sort it odds.sort((a,b) => a - b) 
+// then sort it odds.sort((a,b) => a - b)
 
 
                                               // QUICK PROBLEM #5 //
@@ -105,21 +114,3 @@ var list1 = [
 function isRubyComing(list) {
   return list.some(e => e.language === 'Ruby');
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
