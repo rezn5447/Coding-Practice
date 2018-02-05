@@ -7,21 +7,27 @@
 
 
 for(var i = 1; i <= 6; i++){
-  
+
   if(i <= 5){
     console.log(i)
   } else {
     console.log('DONE!')
   }
-  
+
 }
 
 
 // Write yours here:
 
+for(var i = 1; i <= 11; i++){
 
+  if(i <= 10){
+    console.log(i)
+  } else {
+    console.log('DONE!')
+  }
 
-
+}
 
 
 
@@ -33,6 +39,14 @@ for(var i = 1; i <= 6; i++){
 // Write yours here:
 
 
+for(var i = 10 ; i >= -1; i--){
+
+  if(i >= 0){
+    console.log(i)
+  } else {
+    console.log('DONE!')
+  }
+}
 
 
 
@@ -56,29 +70,21 @@ for(var i = 1; i <= 6; i++){
 
 // Write yours here:
 
-
-
-
-
-
-
-
-
-
-
+var i = 0
+while(i < 10){
+  i+= 2
+  console.log(i)
+}
+console.log('WHILE OUT')
 
 
 
 // Write yours here:
 
 
-
-
-
-
-
-
-
-
-
-
+var i = 12
+while(i > 0){
+  i-= 2
+  console.log(i)
+}
+console.log('WHILE OUT')
