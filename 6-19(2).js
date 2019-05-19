@@ -14,6 +14,20 @@ function doublesAndIndex(nums) {
    })
 }
 
+
+
+function doublesAndIndex(nums){
+  {
+    g    {
+      // okay, block scoped name
+      const x = "sneaky";
+      // error, const
+      x = "foo";
+    }
+    // error, already declared in block
+    let x = "inner";
+  }
+}
 // Put es6 version here:
 
 
