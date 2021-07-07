@@ -15,6 +15,14 @@ var list1 = [
 // Your task is to return the number of JavaScript developers coming from Europe.
 // Use .filter
 
+
+function JSDevs (list){
+  return list.filter((devs) => devs.continent == 'Europe' && devs.language == 'JavaScript').length;
+}
+
+console.log(JSDevs(list1));
+
+
 // Should return 3
 
 
@@ -48,6 +56,12 @@ var list1 = [
 // The trick is to return a person, adding the property as we go
 // you will need a block statement
 // Use .map
+  var greeting = list1.map(function(person) {
+    person.greeting = 'Hi ' + person.firstName + ', what do you like the most about ' + person.language + '?';
+  });
+
+  // console.log(list1);
+
 
 
                                               // PROBLEM #3 //
@@ -64,6 +78,12 @@ var list1 = [
   { firstName: 'Victoria', lastName: 'T.', country: 'Puerto Rico', continent: 'Americas', age: 30, language: 'Python' },
   { firstName: 'Emma', lastName: 'B.', country: 'Norway', continent: 'Europe', age: 19, language: 'Clojure' }
 ];
+
+  var pythonDev = list1.find(function(person){
+    if (person.language == 'Python') {
+      console.log('first Python developer signed up: ' + person.firstName + ', ' + person.country);
+    }
+  });
 
 // Use .find and an If statement, or ternary =)
 
